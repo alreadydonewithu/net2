@@ -1,13 +1,11 @@
 #!/bin/sh
 
-# مقداردهی از ENV
 SS_PASSWORD="${PASSWORD:-fardad1386}"
 SS_METHOD="${ENCRYPT:-aes-256-gcm}"
 WS_PATH="${WS_PATH:-/vpn}"
 SERVER_HOST="${RENDER_EXTERNAL_HOSTNAME:-0.0.0.0}"
 
-# اجرای سرور Shadowsocks با v2ray-plugin
-exec ssserver \
+exec ss-server \
   -s 0.0.0.0 \
   -p 443 \
   -k "${SS_PASSWORD}" \
