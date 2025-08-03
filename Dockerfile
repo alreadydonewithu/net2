@@ -8,4 +8,4 @@ COPY config.json /etc/v2ray/config.json
 EXPOSE 443
 
 # 4) entrypoint (همان باینری خود V2Fly است)
-ENTRYPOINT ["/usr/bin/v2ray", "-config", "/etc/v2ray/config.json"]
+ENTRYPOINT ["/usr/bin/v2ray", "run", "-config", "/etc/v2ray/config.json"]
