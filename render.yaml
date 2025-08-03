@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: def-vpn
+    env: docker
+    plan: free
+    ports:
+      - port: 443
+        protocol: https
+    envVars:
+      - key: PASSWORD
+        value: "fardad1386"
+      - key: ENCRYPT
+        value: "aes-256-gcm"
+      - key: WS_PATH
+        value: "/vpn"
